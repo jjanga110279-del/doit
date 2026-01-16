@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KidsMall Home</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101a22",
+                        "surface-light": "#f6f7f8",
+                        "surface-dark": "#1c2630",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-light dark:bg-background-dark font-display text-[#111518] dark:text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden pb-[80px]">
+<!-- Header Section (Sticky) -->
+<header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md shadow-sm dark:shadow-slate-800/50">
+<!-- Top Bar -->
+<div class="flex items-center justify-between p-4 pb-2">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-[20px]">child_care</span>
+</div>
+<h1 class="text-xl font-extrabold tracking-tight text-[#111518] dark:text-white">KidsMall</h1>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="relative flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark transition hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[#111518] dark:text-white">notifications</span>
+<span class="absolute right-2 top-2 h-2.5 w-2.5 rounded-full bg-primary border-2 border-white dark:border-background-dark"></span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-surface-light dark:bg-surface-dark transition hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[#111518] dark:text-white">shopping_bag</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-3">
+<div class="relative flex w-full items-center">
+<div class="absolute left-4 flex items-center justify-center text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="h-12 w-full rounded-xl border-none bg-surface-light dark:bg-surface-dark py-2 pl-12 pr-4 text-base font-medium text-[#111518] dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search for clothes, toys..." type="text"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col gap-6 pt-4">
+<!-- Hero Carousel -->
+<section class="px-4">
+<div class="relative h-[200px] w-full overflow-hidden rounded-2xl bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Happy kids playing in colorful spring clothes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVENSbmuhBi5kqrWkPoYAJcyFf37vG56jbHm_2Kx5g5QUEYlo1Ea_xHMEwXzum5Euppk5s6IsL78MrDTXfNNz3e3X183fwdjTlHB1xCKLWqmDyb_So4EX3vjOzW01THJJc3efEq9AUu-X05fHbZvFhSrvnliXlBYGx4m4OIXZzFXk9F8K2Chc_peLnm5EwIqqlX7ak_Z2DmHIwYxYhMjrjZFCpphz295VFtpkZKTOzzejtFAzjqgVP4dvobhHBrhsEUrvpMgZFbqo');"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<span class="mb-2 inline-block rounded-md bg-white/20 px-2 py-1 text-xs font-bold text-white backdrop-blur-sm">New Arrivals</span>
+<h2 class="mb-1 text-2xl font-bold leading-tight text-white">Spring <br/>Collection</h2>
+<p class="mb-4 text-sm font-medium text-white/90">Up to 50% Off Selected Items</p>
+<button class="rounded-lg bg-white px-4 py-2 text-sm font-bold text-[#111518] transition hover:bg-gray-100">Shop Now</button>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section>
+<div class="flex items-center justify-between px-4 pb-3">
+<h3 class="text-lg font-bold text-[#111518] dark:text-white">Categories</h3>
+<a class="text-sm font-semibold text-primary" href="#">See All</a>
+</div>
+<div class="no-scrollbar flex gap-4 overflow-x-auto px-4 pb-2">
+<!-- Category Item 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#E3F2FD] dark:bg-blue-900/30">
+<img alt="Baby" class="h-8 w-8 object-contain opacity-80" data-alt="Icon representing baby clothes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrRwiQVFd89FBiN6SlfZgluqpAAY5t5GEbpfvuGADRkaa21UpS30oFzjWG-Rsb4gzzJdg56T2v05IIKx-dG8_StSRtVX7ko5qToPzU1BaOT-dHCkc839tqxtEdH7Ys48o7R1GgIeR4VkNiJGtjUtlWHdxJlNBffILdvZpN_gxG12US8dV8k22CM0lTRidA3Yb3bV5c4PC4FakRpquEnJ7RPSHKT9E4G2bvA3UjlOFR-zapxCN_9CqdeMt4-05v6wgfWjF7J-afbQ0"/>
+</div>
+<span class="text-xs font-semibold text-[#111518] dark:text-gray-300">Baby</span>
+</div>
+<!-- Category Item 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#FCE4EC] dark:bg-pink-900/30">
+<img alt="Girls" class="h-8 w-8 object-contain opacity-80" data-alt="Icon representing girls fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHCJML5OEOhAD-4ALbirPGrWg-ZIDSesmgzXN013dAAQz_skuW_J4QCMr_lPXcvbr0_A0b9yGlP6f2fGsqRQPz4UlpP9Uls9qneXgR5D4DPrXzm6TOyCbV4DGuAsRK898UkZzdZDvnin9NM9a8HnMypIEPUwfTE6lKNDACemkouZF-P5Uiv3aRiXsoVL76sd-OsBkP67HGvoa1_libYbUuTXk0-wTEQTBwt5B7AH4fX0nwIsHhKaTKr8ohLLXGTC_BehdB3kfavuo"/>
+</div>
+<span class="text-xs font-semibold text-[#111518] dark:text-gray-300">Girls</span>
+</div>
+<!-- Category Item 3 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#E8F5E9] dark:bg-green-900/30">
+<img alt="Boys" class="h-8 w-8 object-contain opacity-80" data-alt="Icon representing boys fashion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrpkSMLBvCa-FMjpEEJAdgKUvTkouxoGz3daTrgb7rmDmkgZYlanN5FYc6IL3iH_tsekfL5xkEyjEpkhhwCbd9_VseDqxl4vQHN_cNEBmHK3lMShAvOcc5OxWvMhSel249G5-gejkCoLiaKf8EoBItbb6YZxhLKmYgJyye-qiCvd_GcXa24ln5s_vac6E26G1YP-TpFazzO01oYNs_V3UiRZUPwPmHJ6S18LrM6x109qAojcSrFWqVSwpSNn2CWPd-XsfhJG5tlA"/>
+</div>
+<span class="text-xs font-semibold text-[#111518] dark:text-gray-300">Boys</span>
+</div>
+<!-- Category Item 4 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#FFF3E0] dark:bg-orange-900/30">
+<img alt="Shoes" class="h-8 w-8 object-contain opacity-80" data-alt="Icon representing kids shoes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu2XC7HtV7MBVnzhxpkv2HOlYIJPZ2l80fj-uyO20jTS8cTHiTtsXVI6MLdIHZUMnNEVH25CmcEgHdDU6iFVC7sxq4B105-Pj-PuxRWBNbb2ZVUcV-I2QbfRnW6PFncHxVigaSDJdowdJQAvAucMJXM2w4On6YJdrqEN0eVIrK2qiLEthLRPnyb5DNDK5P_S2t2O467manv1I7hyPRj6YVY3zCh3TUPZMRLFtNNfTo_M0e0v0XMgXRXDFoz_5JQvGxZDQY9BwBLt8"/>
+</div>
+<span class="text-xs font-semibold text-[#111518] dark:text-gray-300">Shoes</span>
+</div>
+<!-- Category Item 5 -->
+<div class="flex flex-col items-center gap-2">
+<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#F3E5F5] dark:bg-purple-900/30">
+<img alt="Toys" class="h-8 w-8 object-contain opacity-80" data-alt="Icon representing toys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBux-0aCZalyHFtukVead1X08NUSe_C1Xrvd9vmIURIzWuNpIP_aj44T0xouSLuJmA9dNPaiEd4pRqevNNu7CmfE_ZVEpTyytlruRYdKqWW9am-Dw9rRc3658KgwFFmVK44F0XHHJG_-rboFL5nk4rzHJDiAGJqT1IMs3ffh5b8SJyCYWpWhTk7WvW0KpD5Z5Q_j6ga2oovKWWJqK6IgaYO_oSLu0ZU8brIoD70R7t9EXcJFFVkf9Jd1CcHevQ4KhZjuAsar00hPQI"/>
+</div>
+<span class="text-xs font-semibold text-[#111518] dark:text-gray-300">Toys</span>
+</div>
+</div>
+</section>
+<!-- Fresh Styles (Horizontal Scroll) -->
+<section>
+<div class="flex items-center justify-between px-4 pb-3">
+<h3 class="text-lg font-bold text-[#111518] dark:text-white">Fresh Styles</h3>
+</div>
+<div class="no-scrollbar flex gap-4 overflow-x-auto px-4 pb-4">
+<!-- Product Card 1 -->
+<div class="group relative flex w-[160px] shrink-0 flex-col gap-3 rounded-xl bg-white dark:bg-surface-dark p-2 shadow-sm transition-all hover:shadow-md border border-transparent dark:border-gray-800">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Toddler wearing a cute pastel cardigan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU5-7vBbXQHAVAEJquTKRiONqPFHSLGpnYUZNcNliIlDc0KLKEercM-wNmpdpIx75cq5JOql2staqs3Lb75EGjnOAQfPn4r1QzWdcVLWRDk-57nNzfO91ngx4i0k-UqfG6CrLZjgj-KA0X-13dtdKUClUwNNVxZUuRwbOzjgF1YqsTSD_NL0AG8-03WRl5IX_cr-9V5muV1uUsOYjCgDVhq8mtij7rPK5jXpHONIzXe-U9uDBQ1ZqPuLI5mbH3GYfxVu9pNprxNmE');"></div>
+<button class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition hover:bg-white text-gray-400 hover:text-red-500">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>s
+<div class="absolute bottom-2 left-2 rounded bg-black/50 px-1.5 py-0.5 text-[10px] font-bold text-white uppercase tracking-wide">New</div>
+</div>
+<div class="px-1">
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Pastel Knit Cardigan</h4>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-base font-bold text-primary">$24.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex w-[160px] shrink-0 flex-col gap-3 rounded-xl bg-white dark:bg-surface-dark p-2 shadow-sm transition-all hover:shadow-md border border-transparent dark:border-gray-800">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Child wearing denim overalls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4V0uhVQlofwAprVQYPhFBFJ4Fh4fRYeaM4MB19BZNV7lHDIBZzUhoUZJF4rShdolOK3HnLXXYUx19xI304gL5m4wsCkQaUZuONkcD1InA-AqTwiCUjGXKvYUbgwduEfLAwgqELQyECE5bKvlo289jhB9Aots_I2Xe1jn7it_ha9xWtR9-uhrWTwVpMVlayNDk0EUW_mZ_ftNJE2r2nRnWZ7opg9oDu87oX1bkgSeMVqOTn2Q9AyE_rOs8e-_eIFnRnbb7LbK4zCA');"></div>
+<button class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition hover:bg-white text-gray-400 hover:text-red-500">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Classic Denim Overalls</h4>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-base font-bold text-primary">$32.00</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex w-[160px] shrink-0 flex-col gap-3 rounded-xl bg-white dark:bg-surface-dark p-2 shadow-sm transition-all hover:shadow-md border border-transparent dark:border-gray-800">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Boy wearing a cool graphic tee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8HLjdgbOW6BsniY-PmxGsAxZega9b6NLScYD-5Ccvy-o3WmhkmAA_Osw4R59Z5ppul5oUMapaEywIigDFKFduQVP_jzizfkf8uvaR5CZ1aRI_urVkFduI-JjByhxYhE4uz-F9ixnkCCMkdHCHC6iE7y9gq53LiW1ZSLFu0GD8TCtrR4H9kosPoLM7bHBEtvsHDOd-0HgOxA8-cfW95m5qspn8WSa6-85fbdLPyMFh_Hfr-fwh2243qVL7Ur3MU20AKxfVY8IQkTg');"></div>
+<button class="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 backdrop-blur-sm transition hover:bg-white text-gray-400 hover:text-red-500">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Cool Graphic Tee</h4>
+<div class="flex items-center gap-1 mt-1">
+<span class="text-base font-bold text-primary">$18.50</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Offer Banner -->
+<section class="px-4 py-2">
+<div class="relative flex items-center overflow-hidden rounded-2xl bg-primary/10 dark:bg-primary/5 p-4 sm:p-6">
+<div class="z-10 flex flex-1 flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-filled text-orange-500" style="font-size: 20px;">local_fire_department</span>
+<span class="text-xs font-bold uppercase tracking-wider text-orange-500">Limited Offer</span>
+</div>
+<h3 class="text-xl font-bold text-[#111518] dark:text-white w-3/4">Get 30% Off on All Summer Dresses</h3>
+<div class="mt-2 flex items-center gap-2">
+<div class="flex gap-1">
+<span class="flex h-8 w-8 items-center justify-center rounded bg-white dark:bg-surface-dark text-xs font-bold shadow-sm">02</span>
+<span class="flex h-8 w-8 items-center justify-center rounded bg-white dark:bg-surface-dark text-xs font-bold shadow-sm">14</span>
+<span class="flex h-8 w-8 items-center justify-center rounded bg-white dark:bg-surface-dark text-xs font-bold shadow-sm">45</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 h-32 w-32 rounded-full bg-primary/20 blur-2xl"></div>
+<div class="z-10 h-24 w-24 shrink-0 rounded-lg bg-cover bg-center shadow-md rotate-3" data-alt="Close up of a summer floral dress pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCakVW3t76V9pHCVeuyPUc8o9Cl_7uDNo_XpBTqk7XxkCjOJnhpZ2F8ej81qMPMIjXzEJHYAhwa80RC5JNWw_tvreN9iNxnIkUDzRrvBHy8SVak_ibAFZS02dzl__VNxayM0gQVwZ3o_y9IM6I5iYrfkZVmSMgN-miIrZEFbw6es2zeuq6R_MlySA2hoA1giltHl8Ed1mVWQ95xGaEa_amtg8nNqkiVN_CA7DZDuR0q6J53GoSUHcGhem_7LkABv-gmer71jIS0AbI');"></div>
+</div>
+</section>
+<!-- Bestsellers (Grid) -->
+<section class="bg-white dark:bg-surface-dark/30 py-6 rounded-t-3xl">
+<div class="flex items-center justify-between px-4 pb-4">
+<h3 class="text-lg font-bold text-[#111518] dark:text-white">Mom's Choice</h3>
+<div class="flex gap-2">
+<button class="rounded-full bg-surface-light dark:bg-surface-dark px-3 py-1 text-xs font-medium text-[#111518] dark:text-white border border-gray-200 dark:border-gray-700">All</button>
+<button class="rounded-full bg-transparent px-3 py-1 text-xs font-medium text-gray-500 hover:text-primary">Girls</button>
+<button class="rounded-full bg-transparent px-3 py-1 text-xs font-medium text-gray-500 hover:text-primary">Boys</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 px-4">
+<!-- Bestseller Item 1 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up of denim jeans for kids" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQ90VyhomG57XY1xJv2P4H8UHLR_SVGjWkhWV6GdbDcfFHIpeqkpxtCNJhOef8FVLqftkmfyLtG_f7oOdaJUqrQT8azAj0sC_icqos3f0qJpc6JXTCgQRVQ-GjBLTs4epNcQqPIr4PWsSYONbT6nHjG9t3LilfN3As6WbEbVljW4BLTzfQENnMmfv-4W9Ymn5pF-YOQzhRKEwdl42A5cSjcscbijkJ6Oz3Gk1X2MiWRzQUxbzdBFNWhJLoGNhwnQwCOYq4_56p6Sw');"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-white/90 px-1.5 py-0.5 backdrop-blur-sm">
+<span class="material-symbols-filled text-[12px] text-yellow-400">star</span>
+<span class="text-[10px] font-bold text-[#111518]">4.9</span>
+</div>
+</div>
+<div>
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Comfort Fit Jeans</h4>
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">$28.00</span>
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bestseller Item 2 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up of colorful cotton t-shirts stacked" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxqTM5pDokqypXqMZlid_ITTqXnmSgg-PT5-X0I7fv4Ri4T7vPqTON0yTDz4KwrraqS0jv1UCW4BbjlYV_4nlu9te9NpKqmhtfWra2ncb-Bfb-Dy1YFzwLJxoVUh5vp7ohBYDX-YMsRFa0WW1jpF7fhWlMrpj_7TQGFZXJbRJUcmLtaeuXc9A_cqhmFD446qsl28xtyIkth9P7-TIxQ-jXany_zTuiPh4AQGc6XQ608RPi-lSUdGadIBqq3gYac_rh3Y08pagLDlc');"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-white/90 px-1.5 py-0.5 backdrop-blur-sm">
+<span class="material-symbols-filled text-[12px] text-yellow-400">star</span>
+<span class="text-[10px] font-bold text-[#111518]">4.8</span>
+</div>
+</div>
+<div>
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Cotton T-Shirt Set</h4>
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">$15.00</span>
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bestseller Item 3 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Cute baby sneakers on wooden floor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD2b66du_keRZjewRo9_0aS_IJT3sRHZQRvzzBviC7zY65PaC6ovpOK5BOb889FUMQWidBCgMtBe4H8r226fDLIUGHXqRlw5iR9-8Wzxu0EYP3hpxMVdqrCzrhc-EcSRkl_ysC_GTahU3EuHPHkScJamEBHFz3XqUMKFINmPaLM3WLv1BXTJ5Gf8OutyLdrJ_rjbi5a0GSSJadQCRTS_xhrgzzaLs-sTx2_0H2cIj90zbfp6QBxsmDDDkmIpgYuAVaT8V-N71kkV4');"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-white/90 px-1.5 py-0.5 backdrop-blur-sm">
+<span class="material-symbols-filled text-[12px] text-yellow-400">star</span>
+<span class="text-[10px] font-bold text-[#111518]">4.7</span>
+</div>
+</div>
+<div>
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Sporty Sneakers</h4>
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">$35.00</span>
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bestseller Item 4 -->
+<div class="flex flex-col gap-2">
+<div class="relative aspect-square w-full overflow-hidden rounded-xl bg-surface-light">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Little girl wearing a pink rain coat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCv_9OT_kwIOYmjHABZkjj05rbwao_Ktpe6pR03WRG70YXCK-y7_dSo0cjBer_FZykFnwTJmTQehe1w5_MqgxPz3xPxfc72jxcDVyV7PZv5quCloYHMwC54-nWva9jC8nXdKlXpOzfDQtrq3AVGg_sVPIVHqdndktI4dDiCt4Te9EulAOI-Mmvcp1_GGFST249CD_Mj0oliuCz5fPWAg-YrAQpQO0EmnAgouXSCoKoaBPywPXpA8gPNK3Vx9xIdXE897obIzac1-6Q');"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-white/90 px-1.5 py-0.5 backdrop-blur-sm">
+<span class="material-symbols-filled text-[12px] text-yellow-400">star</span>
+<span class="text-[10px] font-bold text-[#111518]">5.0</span>
+</div>
+</div>
+<div>
+<h4 class="truncate text-sm font-medium text-[#111518] dark:text-white">Waterproof Rain Coat</h4>
+<div class="flex items-center justify-between">
+<span class="text-base font-bold text-primary">$42.00</span>
+<button class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex h-[80px] w-full items-center justify-around bg-white dark:bg-[#15202b] px-2 pb-4 pt-2 shadow-[0_-2px_10px_rgba(0,0,0,0.05)] dark:border-t dark:border-gray-800">
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 text-primary">
+<span class="material-symbols-filled text-[24px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">grid_view</span>
+<span class="text-[10px] font-medium">Categories</span>
+</button>
+<!-- Center Search/Action Button (Optional Accent) -->
+<button class="group flex flex-col items-center justify-center -mt-6">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/30 transition-transform group-active:scale-95">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<span class="mt-1 text-[10px] font-medium text-gray-400">Search</span>
+</button>
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+<span class="text-[10px] font-medium">Wishlist</span>
+</button>
+<button class="group flex flex-1 flex-col items-center justify-center gap-1 text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</div>
+</body></html>

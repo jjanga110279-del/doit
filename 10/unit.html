@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 12/18 -->
+    <style>
+      div {
+        width: 500px;
+        margin-bottom: 20px;
+        border: 1px solid;
+      }
+      span {
+        display: block;
+      }
+      /* 뷰포트단위 상대단위: 브라우저화면*/
+      .viewport {
+        background-color: lemonchiffon;
+        width: 50vw; /* vw(너비)상대단위 기준이 있음 모니터화면이 기준 */
+        height: 50vh; /* vh(높이) */
+      }
+      .viewport .b1 {
+        background-color: pink;
+        width: 100vw;
+        padding: 10px;
+      }
+      /* 퍼센트 단위 상대단위: 부모기준 */
+      .percent {
+        background-color: lemonchiffon;
+        width: 50%;
+      }
+      .percent .b1 {
+        background-color: pink;
+        width: 100%;
+      }
+
+      .percent .b2 {
+        background-color: gray;
+        width: 80vw;
+      }
+      .viewport .b2 {
+        background-color: aqua;
+        width: 80%;
+        height: 30px;
+        /* %로 너비를 줄때는 높이를 지정해 줘야 함 */
+      }
+      .percent {
+        height: 500px;
+      }
+      .percent .b1,
+      .percent .b2 {
+        width: 30%;
+        float: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>뷰포트</h2>
+    <div class="viewport">
+      <span class="b1"></span>
+      <span class="b2"></span>
+    </div>
+    <h2>퍼센트</h2>
+   
+    <!--줄바꿈되는것은 언어마다 다름 12/18 수업노션 참고  -->
+    <div class="percent">
+      <span class="b1">aaaㅋㅋㅋㅌㅌㅌㅌㅌㅌㅌㅌㅌ</span>
+      <span class="b2">bbb</span>
+    </div>
+  </body>
+</html>

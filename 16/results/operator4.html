@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>할당연산자 ( = )</title>
+  </head>
+  <body>
+    <div id="container">
+      <p>1st</p>
+    </div>
+
+    <script>
+      // 요소 선택
+      const container = document.querySelector("#container");
+      // 값의 재할당     위의 값을 남겨 놓고 값을 재할당 할 경우는 앞에  할당연산자 앞에 +를 추하한다.
+      container.innerHTML += ` <p>2st</p>`;
+    </script>
+  </body>
+</html>

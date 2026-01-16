@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원정보</title>
+  </head>
+  <!-- 11/28수업 -->
+   <!-- 모든 웹브라우저의 디자인을 죄대한 같게 표시하는 것-> 크로스 브라우징 이라고 함. -->
+  <body>
+    <form action="register.php" method="post">
+      <fieldset>
+        <legend>회원정보 입력</legend>
+        <!-- label+br+input+br*2 -->
+        <label for="uname">name: </label>
+        <br />
+        <!-- placeholder 임시 텍스트라서 실제로 입력을 
+                    하면 사라짐(굳이표시를 안해도 무관)
+        value 실제로 서버에 적는 데이터가  저장하는 값
+              (꼭!들어가야 함)-->
+        <input type="text" id="uname" placeholder="name write" value="your name" /><br /><br />
+        <label for="umail">email:</label>
+        <br />
+        <input type="email" id="umail" value="mail" /><br /><br />
+        <label for="utel">tel:</label>
+        <br />
+        <input type="phone" id="utel" value="tel" /><br /><br />
+        <p>성별</p>
+        <!-- radio o도형이 표시됨 -->
+        <label>남성: <input type="radio" name="gender" value="mail" checked /></label>
+        <!-- label>input:radio" -->
+        <label>여성: <input type="radio" name="gender" value="female" /></label>
+
+        <p>취미</p>
+        <label><input type="checkbox" name="hobby" value="sports" />스포츠</label>
+        <!-- label 을 안써도 상관 없으나 사용자의 편의성을 위해 써주는게 좋다... 글씨를 체크해도 선택이 됨 -->
+        <!-- checkbox는 네모의 도형으로 표시됨 -->
+        <!-- input은 단독으로 사용 할 수 있지만 input앞에 label을 사용 해주는 것은 입력값이 있을때  선택의 폭이 넓어짐 input 앞에는 올 수 있는 테그는 label 만 올 수 있음 -->
+        <label><input type="checkbox" name="hobby" value="music" /> 음악 </label>
+        <label><input type="checkbox" name="hobby" value="coding" /> 코딩 </label>
+        <hr />
+        <p>국가:</p>
+        <!--select 는 드롭다운박스를 만드는 태그 option태그가  select 밑에 와야함 그래야 기능을 함-->
+        <!-- option -->
+        <select name="country" id="country">
+          <option>-----선택하세요-----</option>
+          <option value="korea">대한민국</option>
+          <option value="usa">미국</option>
+          <option value="japen">일본</option>
+        </select>
+        <p>자기소개</p>
+        <!-- textarea  메세지를  적을 수 있는 내모 박스를 생성하는 태그 -->
+        <!-- rows="4"  박스에 메세지를 적을 수 있는 줄 수-->
+        <!-- cols="30" 박스안에 메새자 글자 수를 말한다. -->
+        <textarea name="msg" id="msg" rows="4" cols="30"></textarea>
+        <hr />
+        <input type="submit" value="전송">
+        <input type="button" value="취소">
+        <input type="reset" value="초기화">
+        <hr />
+        <!-- button은 input의 다음 버전 둘중 하나늘 써도 상관없음 -->
+        <button type="submit">전송</button>
+        <button>취소</button>
+        <hr />
+        <input type="color" name="color" id="color">
+        <input type="file" name="file" id="file"> <br />
+        <input type="number" name="amount" id="amount" min="0" max="6" step="2" >
+        <input type="date" name="date" id="date">
+       <input type="datetime-local" name="time" id="time">
+       <br>
+       <input type="range" name="range" id="range" min="2" max="10" value="2" step="2">
+        <hr />
+        <input type="submit" value="전송">
+      </fieldset>
+    </form>
+  </body>
+</html>

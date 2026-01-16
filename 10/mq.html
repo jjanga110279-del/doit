@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 사용하기</title>
+  <!-- 12/19 -->
+   
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    /* Do it! 미디어 쿼리 사용  */
+    body {
+      background: url(images/bg-light.jpg) no-repeat fixed;  
+      background-size: cover;
+    }
+
+  </style>
+  <!-- 배경크기에 따라 배경색 바꾸기 -->
+   <!-- 미디어커리를 선언할때는 위에 선언한  스타일 테그 밑에 다시 만들어서 선언해야함 -->
+  <style>
+    /* 너비가 768~1023까지 */
+@media screen and (min-width:768px) and (max-width:1023px) {
+  body{
+    background: url(images/bg-dark.jpg) no-repeat;/* no-repeat 반복 안함 */
+    background-size: cover;
+  }
+  h1{color: white;}
+  
+}
+@media screen and (max-width:767px) {
+  body{
+    background: url(images/bg-small.jpg) no-repeat;
+    background-size: cover;
+  }
+  h1{
+    color: aqua;
+    font-size: 78px;
+    background: white;
+  }
+  
+}
+  </style>
+</head>
+<body>
+  <h1>미디어 쿼리</h1>
+  
+</body>
+</html>

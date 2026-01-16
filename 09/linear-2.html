@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>선형 그러데이션</title>
+    <style>
+      div {
+        width: 500px;
+        height: 300px;
+        border-radius: 10px;
+      }
+      /* Do it! 45도 각도로, #f00에서 #fff로 변하는 선형 그러데이션 .grad 스타일 만들기 */
+      .grad {
+        background: linear-gradient(237.45deg, #ea4242 12.93%, #ddac4f 49.75%, #5fde8e 86.57%);
+      }
+      h1 {
+        font-size: 14em;
+        background: linear-gradient(237.45deg, #ea4242 12.93%, #ddac4f 49.75%, #5fde8e 70%, #ea4242 12.93%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: g 3s linear infinite;
+        background-size: 200%;
+      }
+      @keyframes g {
+        to {
+          background-position: 200% 200%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>text</h1>
+    <div class="grad"></div>
+  </body>
+</html>

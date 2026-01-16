@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- 파비콘 주소창 위에 텝에 들어가는  이미지 넣기 link:favicon -->
+    <title>Flex Box Layout</title>
+    l
+
+    <style>
+      /* 이미지 스타일링 */
+      .pic img {
+        width: 100%; /* 이미지가 .pic 에 가득차도록 */
+        height: auto; /* 이미지의 비율을 유지 */
+      }
+      .container {
+        display: flex; /*  display: flex; 옆으로 배치됨 */
+        flex-wrap: wrap; /* 옆으로 넘칠때 밑으로 내려줘라는 속성 */
+        justify-content: center;
+        justify-content: space-around;
+        row-gap: 10px;
+        gap: 10px;
+        /*justify-content 주측의 컨테이너를 정리하는 속성
+                    space-around; 가로측 여백을 균등하게
+                    center;여백없이 중앙으로
+                    gap:은 하나만 주면 세로 가로 일정하게 균등하게 여백을 주는것임
+      */
+      }
+      .pic {
+        flex-basis: 32%;
+      }
+      /* 769~1024 */
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .pic {
+          flex-basis: 49%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .pic {
+          flex-basis: 100%;
+          /*basis 플렉스 박스들한테는 너비를 의미함  */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pic">
+        <img src="images/kitten-1.jpg" alt="아기 고양이 사진" />
+      </div>
+      <div class="pic">
+        <img src="images/kitten-2.jpg" alt="아기 고양이 사진" />
+      </div>
+      <div class="pic">
+        <img src="images/kitten-3.jpg" alt="아기 고양이 사진" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 모델</title>
+    <!-- 12/12 -->
+    <!-- 블럭은 값을 가질수 있으나 인라인은 값을 가질 수없다. -->
+    <style>
+      button {
+        /* calc 명령어가 계산기
+        값을 계산할때 수식 양쪽에  띄어쓰기를 하고 해야 함 */
+       
+        
+        box-sizing: border-box;
+        width: calc(50% - 20px);
+        padding: 10px 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+      }
+      span {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        border: 1px solid;
+      }
+      /* text-align : 블럭인 부모요소 선언
+                      하위 자식요서 인라인에 적용
+               */
+      .wrap {
+       
+        width: 250px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <span>span1</span>
+    <span>span2</span>
+    <!-- button은 inline이 아님
+       inline-block input, img -->
+    <!-- wrap은 그룹으로 묶는 속성 -->
+    <div class="wrap"><button>button1</button><button>button2</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>참조타입</title>
+  </head>
+  <body>
+    <!-- 객체, 배열타입은 하나의 그릇(식별자)에 다향한 데이터를 여러게 할당할 수 있음  -->
+    <!-- 객체>배열 -->
+    <script>
+      // `` template literal
+      // Array 배열=> [] Arrayliteral( )  값을 번호로 구분함 숫자 0 부터 시작함->인덱스 번호로 관리
+      let zoo = [];
+      console.log(typeof zoo);
+      zoo = `koala`; /* 실행문이 한줄일때는 ; 안해도 됨 */
+      console.log(zoo);
+      zoo = `dog`;
+      console.log(zoo);
+      zoo = [`koala`, `dog`, `cat`];
+      console.log(zoo[1]);
+      document.write(`<h1>${zoo[2]},${zoo[1]}는 예뻐요</h1>`);
+
+      // Object 객체 이름을 붇여서 값을 정함 =>{} 값을 이름(속성명)으로 관리
+      // 객체, 배열타입은 하나의 그릇(식별자)에 다향한 데이터를 여러게 할당할 수 있음
+      let mango = {
+        age: 8,
+        feature: "귀여워",
+        // methodsms 함수의 일종 -특정 객체가 있는걸 함수라 함
+        act: function () {
+          alert("놀자");
+        },
+      };
+      console.log(typeof mango);
+      document.write(`망고는${mango.age}입니다.<br>엄청 ${mango.feature}!!`);
+      // mango.act();
+
+      // Function 함수=>()
+      function addNum(a, b) {
+        // 실행문
+        return a + b;
+      }
+
+      // addNum()계산하라는 말 */
+      // alert(addNum(1,2));
+      // alert(addNum(123456,7845648924));
+    </script>
+    <script>
+      // 배열의 조작
+      let arr = [10, 20, 30, 40, 50, 60];
+      // length(데이터 갯수) 6개
+      // index 0~5 (숫자 0부터 샘)
+      console.log(`🎈arr:${arr}`);
+      // arr=70; /* 재할당- 덮어 씌어짐 */
+      // 60뒤쪽에 (마지막에 )  추가 하려면
+      arr.push(70) /* push로 함  */
+      arr.push(80,90) /* push로 함  */
+      console.log(`🎈arr:${arr}`);
+      // 마지막 삭제는 pop
+      arr.pop()
+      console.log(`🎈arr:${arr}`);
+      // 앞에 추가 ->unshift 하는거와, 삭제->shift 하는 법
+      arr.unshift('(❁´◡`❁)','(┬┬﹏┬┬)')
+      console.log(`🎈arr:${arr}`);
+      arr.shift();
+      console.log(`🎈arr:${arr}`);
+      // 특정위치  추가->, 삭제 ->splice
+      arr.splice(2,1);/* 인덱스 2부터 1개 삭제 */
+      console.log(`🎈arr:${arr}`);
+      arr.splice(2,0,'🎊')/* 인덱스 2에 추가  - 중간에 0은 지울께 없을 시는 0으로 하며 지울께 있으면 숫자를 쓴다*/ 
+      console.log(`🎈arr:${arr}`);
+      arr.splice(3,2,'🎨')
+      console.log(`🎈arr:${arr}`);
+      
+
+      
+    </script>
+  </body>
+</html>

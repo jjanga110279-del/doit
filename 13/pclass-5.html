@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 선택자</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 20px;
+      }
+      .container {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      /* Do it! 가상 선택자를 사용해 항목 선택하기 */
+      /* 컨테이너 자식들 중에서 (띄어쓰기)셋째 포함 밑으로  다 선택 */
+      /* 띄어쓰기를 안하면 컨테이너들 중에서 3번째라는 의미 */
+      .container :nth-child(n + 3) {
+        background-color: tomato;
+      }
+      /* 첫째부터 둘째 까지 */
+      .container :nth-child(-n + 2) {
+        background-color: aqua;
+      }
+      /* 셋째부터 다섯째 까지 */
+      .container :nth-child(n + 3):nth-child(-n + 5) {
+        background-color: yellow;
+      }
+      /* 짝수번째  */
+      .container :nth-child(even)::before {
+        border: 5px solid purple;
+        content: "짝";
+      }
+      /* 홀수번째  */
+      .container :nth-child(odd):after {
+        border: 5px solid #158;
+        content: "홀";
+        border-radius: 50%;
+      }
+      /* p중에서 몇번째 */
+      .container p:nth-of-type(2) {
+        font-size: 2em;
+      }
+
+      /* div중에서 1번째 */
+      .container div:nth-of-type(1){
+        font-size: 2em;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>첫번째</p>
+      <div>두번째</div>
+      <p>세번째</p>
+      <div>네번째</div>
+      <p>다섯째</p>
+      <div>6번째</div>
+      <p>7번째</p>
+      <div>8번쩨</div>
+    </div>
+  </body>
+</html>

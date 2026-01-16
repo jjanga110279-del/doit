@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #fa0;
+      /* Do it! 2초 동안 애니메이션 실행하기 */
+      animation-name: right;/* 원하는 이름 적기 */
+      animation-duration: 500ms; /* ms는 밀리미터초  s는 초*/
+      animation-iteration-count: 5;/* 5번 반복한다는 의미 */
+      animation-iteration-count: infinite;/* 무한반복 */
+      animation-timing-function: ease;/* 가속도 */
+      animation-duration: alternate;/* animation-duration 방향이을 말하며 alternate 왔다 갔다  */
+      animation-play-state: paused;/*  paused멈춘상테로 유지 된다는 의미 */
+
+    }
+
+    /* Do it! @keyframes로 애니메이션 정의하기 */
+    @keyframes right {
+      from{
+        border-radius: 0;
+        transform: translateX(0) rotate(0);
+       
+      }
+      to{
+        border-radius: 50%;
+        transform: translateX(500px) rotate(360deg);
+      }
+    }
+    button:hover~.box{
+      animation-play-state: running;/*  running 재생중이라는  */
+    }
+    .box:nth-of-type(2){
+      animation-delay: 2s;/* 2번째 애니매이션은 처음 시작을 2초 후에 진행함 */
+    }
+
+  </style>
+  <style>
+    .ball{
+      width: 50px;
+      height: 50px;
+      background: pink;
+      animation-name: jjanga;
+      border-radius: 50%;
+      animation-duration: 2s;
+      animation-iteration-count: 10;
+       animation-duration: alternate;
+    }
+    @keyframes jjanga{
+      from{ transform: translateX(0) rotate(0);
+
+      }
+      to{transform: translateX(300px) rotate(360deg);
+
+      }
+    }
+    
+    .ball:hover{
+      animation-play-state: running;
+    }
+  </style>
+</head>
+
+<body>
+  <button>hover</button>
+	<div class="box">	</div>
+  <div class="box">	</div>
+  <div class="ball">	</div>
+
+</body>
+</html>
+	

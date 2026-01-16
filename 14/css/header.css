@@ -1,0 +1,119 @@
+@charset 'UTF-8'; /* @charset 'UTF-8'; 꼭 대문자로로  써야함 서버에 올라을시 한글 깨짐 */
+/* resrt.css */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+/* common.css */
+html {
+  overflow-y: scroll; /* 물리적으로 html에 스크롤 바를 넣고 시작함 (y측만-세로),기본적으로 가로방향 스크롤은 없음 y측만 설정하고 시작함 */
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500; /* 500이 기본값 */
+}
+header {
+  height: 100vh;
+  display: flex; /* 요소가 하나일때 플렉스를 쓰는이유는 자식요소를 정렬하기 위해 씀 */
+  align-items: center;
+  justify-content: center; /* 가로방향 정렬 */
+  position: relative;
+  text-align: center;
+  perspective: 100px;
+  overflow: hidden;
+}
+/* css2버전에서는 :hover,:before,:nth-child */
+/* css3버전에서는 :hover,::before,::nth-child :콜론이 들어가있을경우는 가상선택자로 보면 됨 */
+/* before, after만 형재요소로 들어감 */
+header::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url(https://placedog.net/1200) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+}
+header::after {
+  background: #f9fcff;
+  content: "";
+  position: absolute;
+  top: 90%;
+  height: 40rem;
+  left: -5%;
+  right: -5%;
+  transform-origin: 0 0;
+  z-index: 0;
+  animation: rotate-up 0.5s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+}
+
+span.material-symbols-rounded {
+  font-size: 200px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation-delay: 0.6s;
+}
+.header-title,
+.header-subtitle {
+  color: #fff;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  margin-bottom: 2rem;
+}
+.header-title {
+  animation-delay: 0.8s;
+}
+.header-subtitle {
+  animation-delay: 1s;
+}
+.header-button {
+  animation-delay: 1.2s;
+  transform: translateZ(0.1px);
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+
+  a {
+    color: brown;
+  } /* 모든 a태그는 상속이 안됨, 지정해줘야 칼라를 바꿀 수 있음 */
+}
+.header-button:hover{background-color: rgba(255, 255, 255, 0.5);}
+
+/* keyframes */
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem) scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rotate-up {
+  100% {
+    transform: rotateZ(-4deg);
+  }
+}

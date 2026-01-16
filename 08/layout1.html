@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{
+      margin: auto;
+      width: 1000px;
+    }
+    header,
+    nav,
+    footer{
+      width: 1000px;
+      height: 100px;
+      background-color: slateblue;
+      color: white;
+    }
+    aside { 
+    
+      height: 600px;
+      background-color: #3de5dd57;
+      color: white;
+    }
+    section {
+      height: 600px;
+      background-color: #49acb3;
+      color: white;
+    }
+ aside,
+ section{ 
+  width: calc(100% / 3);
+ }
+ .fl{
+  float: left;
+ }
+ .cl{
+  clear: both;
+ }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <header>haeder</header>
+  <nav>nav</nav>
+  <aside class="fl">side_left</aside>
+  <section class="fl">cnetent</section>
+  <aside class="fl">side_right</aside>
+  <footer class="cl">footer</footer>
+  </div>
+
+  
+</body>
+</html>

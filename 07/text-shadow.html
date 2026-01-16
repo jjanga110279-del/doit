@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>text-shadow</title>
+    <!-- 12/8 -->
+    <style>
+      h1 {
+        font-size: 60px;
+      }
+      /* Do it! text-shadow 속성으로 텍스트 그림자 추가하기 */
+      .shadow1 {
+        color: red;
+        /* x y blur (shadow는 중복해서 적용할 수 있다.) */
+        text-shadow: 9px 6px 15px black, -9px -6px 0px blue;
+      }
+      .shadow2 {
+        color: rgba(167, 221, 60, 1);
+        text-shadow: 2px 0px 0px rgba(128, 0, 64, 1), 3px 2px 0px rgba(77, 0, 38, 0.5), 3px 0px 3px rgba(255, 0, 43, 1), 5px 0px 3px rgba(128, 0, 21, 1), 6px 2px 3px rgba(77, 0, 13, 0.5), 6px 0px 9px rgba(255, 85, 0, 1), 8px 0px 9px rgba(128, 42, 0, 1), 9px 2px 9px rgba(77, 25, 0, 0.5), 9px 0px 18px rgba(255, 213, 0, 1), 11px 0px 18px rgba(128, 106, 0, 1), 12px 2px 18px rgba(77, 66, 0, 0.5), 12px 0px 30px rgba(212, 255, 0, 1), 14px 0px 30px rgba(106, 128, 0, 1), 15px 2px 30px rgba(64, 77, 0, 0.5), 15px 0px 45px rgba(128, 255, 0, 1), 17px 0px 45px rgba(64, 128, 0, 1), 17px 2px 45px rgba(38, 77, 0, 0.5);
+        animation: a 5s infinite alternate; /* infinite alternate 교차되면서 반복재생 */
+      }
+      @keyframes a {
+        0% {
+          color: aliceblue;
+          text-shadow: 2px 0px 0px rgba(128, 0, 64, 1);
+        }
+        100% {
+          color: black;
+          text-shadow: 17px 2px 45px rgba(38, 77, 0, 0.5);
+        }
+      }
+
+      .shadow3 {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="shadow1">HTML</h1>
+    <h1 class="shadow2">CSS</h1>
+    <h1 class="shadow3">자바스크립트</h1>
+  </body>
+</html>

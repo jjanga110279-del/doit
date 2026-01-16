@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      margin: auto;
+      position: relative; /* 상대방 요조 좌표를 0으로 만들어줌
+                           (부모일때 자식을) */
+    }
+    .box{
+      width: 10%;
+      height:10%;
+      background-color: yellow;
+      position: absolute;
+      /* 본인 요소를 초기화 시킴:부모랑 상관없음(좌표값이 왼쪽위쪽으로-브라우저 좌측 상단으로 ) */
+     /* 기본적으로 브라우저에서 50%씩 기준점음 움직일때  수평 수직이 아니라  대각선으로 계산을 한다. */
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      /* transform을 사용할때는 도형의 중심축이 좌측 상단이 아니라 도형의 중심으로 변경된다.transform을 사용할시에는 원래 가지고 있던 중심축을 사용해서 속성을 사용후 사용해야 함   */
+      /* translate 수직, 수평 */
+      /* margin-left: -5%;
+      margin-right: -5%; ----->구버전으로 많이 사용하던 방법*/
+
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</div>
+</body>
+</html>

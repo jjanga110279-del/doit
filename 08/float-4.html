@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>박스모델</title>
+    <!-- 12/15 -->
+    <style>
+      .wrapper {
+        width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .sidebar {
+        width: 150px;
+        height: 150px;
+        margin-right: 10px;
+      }
+      #left {
+        background: #ffd800;
+        float: left;
+      }
+      #right {
+        background: #0094ff;
+        float: right;
+      }
+      /* Do it! clear 속성을 사용해 플로팅 해제하기 */
+      /* 레이아웃-
+		 1.dispiay: inline-block 2.float:left, right
+		    공통점: 아이템박스에 선언   
+				 차이점:-inline-block 콘텐츠로 취급 공백이 생김
+				                               - float: 원래 html문서의 흐름을 무시하면서 한층위로 뜨는 성징을 가짐. 다음에 오는 형제요소에 해제를 해야함. */
+			 /*  */
+			#righf+p {
+				clear: both;/*both는 전부 해제  */
+				clear: left;
+				clear: right;
+			}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar" id="left">사이드바</div>
+      <div class="sidebar" id="right">사이드바</div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, deserunt. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia totam animi delectus nesciunt. Minus accusamus consequuntur inventore fugit culpa reiciendis dicta aliquam.</p>
+    </div>
+  </body>
+</html>

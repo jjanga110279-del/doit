@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>블록 레벨과 인라인 레벨</title>
+    <!-- 12/11 -->
+    <!-- 블록레벨: 요소를 삽입했을때 혼자 한줄을 차지하는 요소  div,h1,p  블록>블록 안됨  -->
+    <!-- 인라레벨요소:줄을 차지하지 않는 요소  img, strong, br, span등  인라인>블록 안됨 -->
+    <!-- 예외 : div>div  div>p div>h1  a>div 는 가능 -->
+    <style>
+      body * {
+        /* body 하위에 있는 모든 요소에 대해 */
+        border: 1px solid blue;
+      }
+      .accent {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div>블럭 ok
+		    블럭>div x -->
+    <h1>시간이란...</h1>
+
+    <p>
+      내일 죽을 것처럼
+      <span class="accent">오늘</span>
+      을 살고
+    </p>
+    <p>영원히 살 것처럼 <br />내일을 꿈꾸어라.</p>
+  </body>
+</html>

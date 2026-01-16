@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>폰트 어썸 cdn(content delivery network)</title>
+    <!-- 폰트어썸 cdn 은 다른 써버에 링크만 받아서 연결 하는 방식(다운로드 없이) -->
+    <!-- 12/8 -->
+
+    <style>
+      /* @는 css에서 함수라 함 */
+
+      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+      @import url(fonts/font.css);
+
+      body {
+        font-family: "abc";
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      li {
+        border: 1px solid #222;
+        padding: 10px 20px;
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link,
+      a:visited,
+      a:hover {
+        color: #222;
+      }
+      .fa-paw {
+        color: red;
+        font-size: 50px;
+      }
+      .fa-cat {
+        color: gray;
+        font-size: 50px;
+      }
+      .fa-piggy-bank.fa-bounce {
+        color: pink;
+        font-size: 50px;
+      }
+    </style>
+    <!-- Do it! 아이콘 폰트 CDN 링크하기 -->
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <!-- Do it! 메뉴에 아이콘 폰트 추가하기 -->
+        <li>
+          <i class="fa-solid fa-paw"></i>
+          <a href="#">메뉴1</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-cat"></i>
+          <a href="#">메뉴2</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-piggy-bank fa-bounce"></i>
+          <a href="#">메뉴3</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

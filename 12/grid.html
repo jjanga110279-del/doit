@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1000px;
+        /* row:250px */
+        border-radius: 5px;
+        margin: auto;
+        display: grid;
+
+        grid-template-rows: repeat(3, 250px);
+        gap: 10px;
+        grid-template-areas:
+          "i1 i2 i2"
+          "i1 i3 i4"
+          "i5 i5 i5";
+      }
+      .item{
+        border-radius: 5px;
+      }
+      
+      .item1 {
+        background-color: aqua;
+        grid-area: i1;
+      }
+      .item2 {
+        background-color: pink;
+        grid-area: i2;
+      }
+      .item3 {
+        background-color: blue;
+        grid-area: i3;
+      }
+      .item4 {
+        background-color: blueviolet;
+        grid-area: i4;
+      }
+      .item5 {
+        background-color: gray;
+        grid-area: i5;
+      }
+        /*@media만 써도 상관없음 모든 미디어에 적용된다는 뜻 만약 스크린등을 적는 것은 조건부 일때 적음.  */
+@media (max-width:768px) {
+  .container{
+    width: 720px;
+    display: block;
+  }
+  .item{
+    height: 200px;
+    margin-bottom: 10px;
+    
+  }
+  
+}
+@media (max-width:320px) {
+  .container{
+    width: 300px;
+    display: block;
+  }
+  .item{
+    height: 200px;
+    margin-bottom: 10px;
+
+  }
+  
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item5">item5</div>
+    </div>
+  </body>
+</html>

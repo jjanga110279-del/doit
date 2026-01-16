@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html의 기본 문법</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 3px solid #0066cc;
+        padding-bottom: 10px;
+      }
+      h2 {
+        color: #0066cc;
+        margin-top: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      th {
+        background-color: #0066cc;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        font-weight: bold;
+      }
+      td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      tr:hover {
+        background-color: #f9f9f9;
+      }
+      code {
+        background-color: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+      }
+      .example-box {
+        background-color: #f0f0f0;
+        border-left: 4px solid #0066cc;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+      .warning-box {
+        background-color: #fff3cd;
+        border-left: 4px solid #ff9800;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+      .success-box {
+        background-color: #d4edda;
+        border-left: 4px solid #28a745;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+      .wrong {
+        color: #d32f2f;
+        font-weight: bold;
+      }
+      .correct {
+        color: #388e3c;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML의 기본 문법</h1>
+    <p>
+      HTML문서는 웹페이지의 뼈대 역할을 함 <br />
+      계층구조를 가진다
+    </p>
+
+    <h2>태그의 사용법</h2>
+    <p>태그는 여는태그와 닫는태그로 구성됨 <br /></p>
+    <p>
+      태그를 표시하는 기호는 &lt; &gt; 이며 괄호내에 명령어를 사용한다. 공백을 표시할때는 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 를 사용한다.
+    </p>
+
+    <h2>태그의 분류</h2>
+    <p>태그가 웹페이지에서 차지하는 영역에 따라 두가지로 나눌 수 있다.</p>
+
+    <h2>Block Level vs Inline Level 비교</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">항목</th>
+          <th style="width: 37.5%;">Block Level (블록 레벨)</th>
+          <th style="width: 37.5%;">Inline Level (인라인 레벨)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>너비 (Width)</strong></td>
+          <td>웹페이지의 화면 전체 너비를 차지</td>
+          <td>콘텐츠의 크기만큼만 차지</td>
+        </tr>
+        <tr>
+          <td><strong>줄바꿈</strong></td>
+          <td>항상 새로운 줄에서 시작하고 끝남</td>
+          <td>텍스트 흐름 안에서 같은 줄에 배치</td>
+        </tr>
+        <tr>
+          <td><strong>마진 (Margin)</strong></td>
+          <td>위, 아래, 좌, 우 모두 적용됨</td>
+          <td>좌, 우만 적용 (위, 아래는 무시)</td>
+        </tr>
+        <tr>
+          <td><strong>패딩 (Padding)</strong></td>
+          <td>모든 방향 적용됨</td>
+          <td>좌, 우만 적용 (위, 아래 제한적)</td>
+        </tr>
+        <tr>
+          <td><strong>높이 (Height)</strong></td>
+          <td>width, height 속성 적용 가능</td>
+          <td>width, height 속성 무시됨</td>
+        </tr>
+        <tr>
+          <td><strong>정렬</strong></td>
+          <td>text-align, margin으로 정렬 가능</td>
+          <td>text-align으로만 정렬 가능</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>주요 태그 분류</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2" style="background-color: #e6f2ff;">Block Level 태그</th>
+          <th colspan="2" style="background-color: #fff9e6;">Inline Level 태그</th>
+        </tr>
+        <tr>
+          <th style="background-color: #e6f2ff;">태그</th>
+          <th style="background-color: #e6f2ff;">설명</th>
+          <th style="background-color: #fff9e6;">태그</th>
+          <th style="background-color: #fff9e6;">설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;div&gt;</code></td>
+          <td>일반 컨테이너</td>
+          <td><code>&lt;span&gt;</code></td>
+          <td>일반 인라인 컨테이너</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;</code></td>
+          <td>문단</td>
+          <td><code>&lt;a&gt;</code></td>
+          <td>하이퍼링크</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1~h6&gt;</code></td>
+          <td>제목</td>
+          <td><code>&lt;strong&gt;</code></td>
+          <td>강한 강조 (굵음)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul&gt;, &lt;ol&gt;</code></td>
+          <td>리스트</td>
+          <td><code>&lt;em&gt;</code></td>
+          <td>강조 (기울임)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;li&gt;</code></td>
+          <td>리스트 항목</td>
+          <td><code>&lt;img&gt;</code></td>
+          <td>이미지</td>
+        </tr>
+        <tr>
+          <td><code>&lt;table&gt;</code></td>
+          <td>표</td>
+          <td><code>&lt;button&gt;</code></td>
+          <td>버튼</td>
+        </tr>
+        <tr>
+          <td><code>&lt;form&gt;</code></td>
+          <td>폼</td>
+          <td><code>&lt;input&gt;</code></td>
+          <td>입력 필드</td>
+        </tr>
+        <tr>
+          <td><code>&lt;header&gt;</code></td>
+          <td>헤더 영역</td>
+          <td><code>&lt;label&gt;</code></td>
+          <td>폼 레이블</td>
+        </tr>
+        <tr>
+          <td><code>&lt;footer&gt;</code></td>
+          <td>푸터 영역</td>
+          <td><code>&lt;br&gt;</code></td>
+          <td>줄바꿈</td>
+        </tr>
+        <tr>
+          <td><code>&lt;section&gt;</code></td>
+          <td>섹션</td>
+          <td><code>&lt;i&gt;, &lt;b&gt;</code></td>
+          <td>기울임, 굵음</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>인라인 vs 블록 사용 시 주의할 점</h2>
+
+    <h3>1️⃣ 블록 태그 내부에 인라인 태그 배치 (OK)</h3>
+    <div class="success-box">
+      <p><span class="correct">✓ 올바른 사용</span></p>
+      <p>블록 태그 안에 인라인 태그를 넣을 수 있습니다.</p>
+      <pre><code>&lt;div&gt;
+  &lt;span&gt;텍스트&lt;/span&gt;
+  &lt;strong&gt;강조&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h3>2️⃣ 인라인 태그 내부에 블록 태그 배치 (주의!)</h3>
+    <div class="warning-box">
+      <p><span class="wrong">✗ 잘못된 사용</span></p>
+      <p>인라인 태그 안에 블록 태그를 넣으면 레이아웃이 깨질 수 있습니다.</p>
+      <pre><code>&lt;span&gt;
+  &lt;div&gt;텍스트&lt;/div&gt;  &lt;!-- 문제 발생! --&gt;
+&lt;/span&gt;</code></pre>
+      <p><strong>문제점:</strong> 브라우저가 자동으로 태그를 수정하거나 예상치 못한 결과가 발생합니다.</p>
+    </div>
+
+    <h3>3️⃣ 인라인 태그에 높이/너비 설정 (주의!)</h3>
+    <div class="warning-box">
+      <p><span class="wrong">✗ 주의 필요</span></p>
+      <p>인라인 태그에 width, height를 설정해도 적용되지 않습니다.</p>
+      <pre><code>&lt;span style="width: 200px; height: 100px;"&gt;
+  텍스트 (너비/높이가 적용 안됨!)
+&lt;/span&gt;</code></pre>
+      <p><strong>해결 방법:</strong> CSS의 <code>display: block;</code> 또는 <code>display: inline-block;</code>을 사용합니다.</p>
+    </div>
+
+    <div class="success-box">
+      <p><span class="correct">✓ 올바른 해결</span></p>
+      <pre><code>&lt;span style="display: inline-block; width: 200px; height: 100px;"&gt;
+  텍스트 (이제 너비/높이가 적용됨!)
+&lt;/span&gt;</code></pre>
+    </div>
+
+    <h3>4️⃣ 인라인 태그에 마진(위/아래) 설정 (주의!)</h3>
+    <div class="warning-box">
+      <p><span class="wrong">✗ 주의 필요</span></p>
+      <p>인라인 태그에 위/아래 마진을 설정해도 적용되지 않습니다.</p>
+      <pre><code>&lt;span style="margin-top: 20px; margin-bottom: 20px;"&gt;
+  텍스트 (위/아래 여백이 적용 안됨!)
+&lt;/span&gt;</code></pre>
+      <p><strong>좌/우 마진은 정상 적용됨</strong></p>
+    </div>
+
+    <div class="success-box">
+      <p><span class="correct">✓ 올바른 해결</span></p>
+      <pre><code>&lt;span style="display: inline-block; margin-top: 20px; margin-bottom: 20px;"&gt;
+  텍스트 (이제 모든 마진이 적용됨!)
+&lt;/span&gt;</code></pre>
+    </div>
+
+    <h3>5️⃣ 블록 태그 사용 시 불필요한 공백 주의</h3>
+    <div class="warning-box">
+      <p><span class="wrong">✗ 잘못된 사용</span></p>
+      <p>블록 태그들 사이의 공백이 마진과 겹칠 수 있습니다. (마진 병합 현상)</p>
+      <pre><code>&lt;div style="margin-bottom: 20px;"&gt;첫 번째&lt;/div&gt;
+&lt;div style="margin-top: 20px;"&gt;두 번째&lt;/div&gt;
+&lt;!-- 실제 간격은 40px이 아닌 20px! --&gt;</code></pre>
+    </div>
+
+    <h3>6️⃣ 시맨틱 태그 사용 권장</h3>
+    <div class="success-box">
+      <p><span class="correct">✓ 권장 사용</span></p>
+      <p>의미있는 블록 태그를 사용하면 가독성과 SEO가 향상됩니다.</p>
+      <pre><code>&lt;!-- 좋음 --&gt;
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;section&gt;&lt;/section&gt;
+&lt;article&gt;&lt;/article&gt;
+&lt;footer&gt;&lt;/footer&gt;
+
+&lt;!-- 피하기 --&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;</code></pre>
+    </div>
+
+    <h3>7️⃣ 인라인 태그로 레이아웃 구성하지 않기</h3>
+    <div class="warning-box">
+      <p><span class="wrong">✗ 주의 필요</span></p>
+      <p>페이지의 구조적 레이아웃은 반드시 블록 태그로 작성해야 합니다.</p>
+      <pre><code>&lt;!-- 절대 하면 안됨! --&gt;
+&lt;span&gt;&lt;span&gt;&lt;span&gt;레이아웃&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</code></pre>
+    </div>
+
+    <div class="success-box">
+      <p><span class="correct">✓ 올바른 방법</span></p>
+      <pre><code>&lt;!-- 올바른 구조 --&gt;
+&lt;header&gt;&lt;/header&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;aside&gt;&lt;/aside&gt;
+&lt;footer&gt;&lt;/footer&gt;</code></pre>
+    </div>
+
+    <h2>정리 및 요약</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>주의 사항</th>
+          <th>문제점</th>
+          <th>해결 방법</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>인라인 태그의 높이/너비</td>
+          <td>width, height 무시됨</td>
+          <td><code>display: inline-block;</code> 사용</td>
+        </tr>
+        <tr>
+          <td>인라인 태그의 위/아래 마진</td>
+          <td>margin-top/bottom 무시됨</td>
+          <td><code>display: inline-block;</code> 사용</td>
+        </tr>
+        <tr>
+          <td>인라인 안에 블록 태그</td>
+          <td>레이아웃 깨짐</td>
+          <td>블록 태그를 바깥으로 이동</td>
+        </tr>
+        <tr>
+          <td>마진 병합 현상</td>
+          <td>예상과 다른 간격</td>
+          <td>padding 사용 또는 마진 통일</td>
+        </tr>
+        <tr>
+          <td>인라인으로 레이아웃</td>
+          <td>유지보수 어려움</td>
+          <td>블록 태그 사용 (div, section 등)</td>
+        </tr>
+        <tr>
+          <td>의미 없는 div 남용</td>
+          <td>SEO 저하, 가독성 감소</td>
+          <td>시맨틱 태그 사용 (header, nav 등)</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

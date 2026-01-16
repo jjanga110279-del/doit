@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform:rotate</title>
+  <style>
+		#container{
+			width:800px;
+			margin:20px auto;
+		}
+		.origin {
+			width: 100px;
+			height: 100px;
+			float: left;
+			margin: 40px;
+			transition: 2s;
+		}
+		img{width: 100%;}
+
+		/* Do it! rotate 함수로 회전하기 */
+		#rotate1:hover{
+			transform-origin: 0% 50%;/* 중심축을 변경해주는 속성 */
+			transform: rotate(40deg);
+			transform: rotate(3turn);/* turn은 바퀴수 즉 3turn 은 3바퀴를 돌림 */
+		}
+		#rotate2:hover{
+			transform: rotate(-180deg);
+		}
+
+  </style>
+</head>
+<body>		
+	<div id="container"> 
+		<div class="origin" id="rotate1">
+			<img src="images/home.png" alt="">	
+		</div>
+		<div class="origin" id="rotate2">
+			<img src="images/home.png" alt="">							
+	</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        width: 700px;
+        height: 300px;
+        text-align: center;
+        display: grid;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+          "b1 b1 b1"
+          "b2 b3 b3"
+          "b2 b4 b4";
+      }
+      /* div[class^=box]{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+      }    ----->div[class^=box]로 하는 방법도 있음 */
+
+      .box1 {
+        background-color: blue;
+        grid-area: b1;
+      }
+      .box2 {
+        background-color: greenyellow;
+        grid-area: b2;
+      }
+      .box3 {
+        background-color: yellow;
+        grid-area: b3;
+      }
+      .box4 {
+        background-color: orange;
+        grid-area: b4;
+      }
+      @media screen and (max-width: 700px) {
+        .content {
+          display: block;
+          width: 100%;
+          div {
+            height: 100px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
+      <div class="box4">box4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+  <title>박스모델</title> 
+   <!--12/11  -->
+	<style>
+    div {
+      margin-bottom:20px;
+    }
+		.box1 {
+			width:200px;
+			height:100px;
+      padding:30px;
+      border:10px solid #ccc;
+      /*  box-sizing 의  border-box는 가로 세로 값안에 모든걸 맞추라는 속성  반응형 웹브라우저를 만들때 사용됨*/
+      box-sizing: content-box;
+      box-sizing: border-box;
+		}
+    .box2 {
+      box-sizing: border-box;
+			width:200px;
+			height:100px;
+      padding:20px;
+      border:10px solid #00f;
+    }
+	</style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+</html>

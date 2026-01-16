@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>text-decoration</title>
+    <!-- 12/8 -->
+    <style>
+      .none {
+        text-decoration: none;
+      }
+      .none:hover {
+        text-decoration: underline;
+        color: red;
+      } /* hove는 글씨 위에 마우스를 가져 갔을때 밑줄이 쳐지게 하는 값 */
+
+      .underline {
+        text-decoration: underline;
+        background-color: yellow;
+      }
+      .underline:hover {
+        text-decoration: none;
+        background-color: rgba(255, 255, 0, 0);
+      } /*underline 에 마우스 올리면 밑줄, 배경색 없애기  */
+
+      .overline {
+        text-decoration: overline;
+      }
+      .line {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>text-decoration 속성</h1>
+    <!-- Do it! 인라인 스타일을 사용해 text-decoration 속성 적용하기 -->
+    <p class="none">none</p>
+    <p class="underline">underline</p>
+    <p class="overline">overline</p>
+    <p class="line">line through</p>
+  </body>
+</html>

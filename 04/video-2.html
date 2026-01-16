@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>멀티미디어 파일 삽입하기</title>
+  </head>
+  <body>
+    <h1>웹 문서에 비디오 파일 삽입하기</h1>
+    <!-- 11/28 수업, 자막넣기 -->
+    <!-- Do it! images/salad.jpg 파일을 포스터 이미지로 사용하세요. -->
+    <!-- 자막을 넣을 시 <track>태그는 단일 태그로 사용한다(닫는 태그 없음). -->
+    <!-- kind  기계한테 자막의 특성을 빠르게 알려주는 태그 -->
+    <!--  default 언어자막의 나라지정을  우선순위를  지정할 때 쓰는 속성-->
+      <!-- 영상과 포스터(썸네일의 개념)의 속성의 순서는 상관 없으나 포스터가 먼저 나오고 영상이 나옴  -->
+
+    <video src="medias/salad.mp4" controls width="700" poster="images/salad.jpg">
+      <track src="medias/subtitle_ko.vtt" srclang="ko" label="한국어" kind="subtitles" default />
+      <track src="medias/subtitle_en.vtt" srclang="en" label="English" kind="subtitles" />
+    </video>
+  </body>
+</html>

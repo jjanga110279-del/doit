@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 클래스</title>
+    <style>
+      body {
+        background-color: #222;
+      }
+      nav {
+        width: 600px;
+        height: 60px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        padding: 0.4rem 0;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #ff7a18;
+      }
+
+      /* Do it! :has 가상 선택자 사용하기 */
+      /* has를 사용하면 nav:has(a) nav가 가지고있는 a가 전부 선택됨 */
+      /* nav:has(a){
+        border: 2px solid white;
+      } */
+      /* a:hover를 포함한 nav가 선택됨 */
+      /* nav가 자식중 :hover 가 안된 a가 선택됨  띄어쓰지 중요 */
+      nav:has(a:hover) a:not(:hover){
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">home</a>
+      <a href="#">about</a>
+      <a href="#">portfolio</a>
+      <a href="#">contact</a>
+    </nav>
+  </body>
+</html>
