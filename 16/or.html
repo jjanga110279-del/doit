@@ -1,14 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>조건문</title>
-</head>
-<body>
-  <script>
-    //  Do it! OR 연산자를 사용해 조건 체크하기 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문</title>
+  </head>
+  <body>
+    <script>
+      //  Do it! OR 연산자를 사용해 조건 체크하기
+      //50보다 작은 숫자 2개를 입력받아 둘중 하나가 10보다 작은지 판단
+      let num1 = parseInt(prompt("50미만의 숫자를 넣으세요"));
 
-  </script>
-</body>
+      let num2 = parseInt(prompt("50미만의 숫자를 넣으세요"));
+     // if (num1 < 10 || num2 < 10) {
+     //   alert('숫자 2개중 하나는 10미만이군요')
+     // }else{
+     //   alert('숫자 2개 모두 10이상 이군요')
+     // }
+
+    //  두숫자 모두 10미만인지 검사
+      if (parseInt(num1) < 10 && parseInt(num2) < 10) {
+       alert('숫자 2개 모두 10미만 이군요')
+     }else{
+        alert('숫자 2개 중 하나는 10이상 이군요')
+      }
+
+      console.log(true);
+      console.log(!true);
+      //! =>낫연산자(한나만 독립적으로 쓸때 ) 반대값으로 출력됨
+      // !==  => A와 B의 값을 비교 후 다르면 true
+      console.log(true!==false);
+      
+      
+    
+    </script>
+  </body>
 </html>

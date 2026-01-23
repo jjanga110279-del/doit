@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 
+  고급언어로 프로그래밍 된걸 저급언어로 해석하는 해석기
+  *컴파일방식 (compile) : 프로그램 전체를 한번에 해석
+   인터프리터방식 (interpreter) : 프로그램의 명령어를  한줄씩 해석 -위에서 아래로 -->
+  <body>
+    <script>
+      ab(2, 3);
+      function ab(a, b) {
+        console.log(a + b);
+      }
+
+      //익명함수-표현식,화살표,즉시실행
+      //cd(50,800)
+      const cd = function (a, b) {
+        console.log(`표현식:${a + b + a * b}`);
+      };
+       cd(50,800)
+    </script>
+  </body>
+</html>

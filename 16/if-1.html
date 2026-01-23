@@ -1,14 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>조건문</title>
-</head>
-<body>
+  </head>
+  <body>
+    <script>
+      // if문은 조건문이 거짓이면 실행을 안하고  다음 문장으로 실행이됨(참일경우)
+      let your_gender = "여자";
+      console.log(your_gender);
+      document.write(`당신은 ${your_gender}이므로 `);
+      if (your_gender === "남자") {
+        document.write(`치마를 입으세요`);
+      }
+      if (your_gender === "여자") {
+        document.write(`바지를 입으세요`);
+      }
+    </script>
     <script>
       // Do it! 사용자가 입력한 숫자가 3의 배수인지 판별하기
-
+      // userNum변수를 선언하고 사용자로 부터 숫자를 입력받으세요
+      //parseInt 소수점 빼고 정수만 산출됨
+      let num =prompt();
+      if (num !== null) {
+        if (parseInt(num) % 3 === 0) {
+          alert("3의 배수입니다");
+        }else{
+            alert('3의 배수가 아닙니다')
+        }
+      }else
+      alert('입력이 취소 되었습니다.'); 
+      //Not a Number => NaN으로 출력됨(에러아님)
+      //    (num % 3 === 0)? alert("3의 배수입니다"): alert("3의 배수 아닙니다")/* 삼항연사자 ?: => 조건? true : false */
     </script>
-</body>
+  </body>
 </html>
