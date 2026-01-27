@@ -1,39 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }    
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      width: 300px;
-      border: 1px dotted #ccc;
-      padding: 30px;
-      margin: 10px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-	<div class="container">
-		<h1 id="heading">에디오피아 게뎁</h1>
-		<img src="images/coffee-pink.jpg" alt="커피잔" id="cup" width="200" height="200">
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 300px;
+        border: 1px dotted #ccc;
+        padding: 30px;
+        a
+        margin: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading">에디오피아 게뎁</h1>
+      <img src="images/coffee-pink.jpg" alt="커피잔" id="cup" width="200" height="200" />
+    </div>
 
-  <script>
-    // Do it! DOM을 사용해 텍스트와 이미지 수정하기
+    <script>
+      // Do it! DOM을 사용해 텍스트와 이미지 수정하기
+      let a;
 
-  </script>
-</body>
+
+      const wrap = document.querySelector(".container");
+      const cup = wrap.querySelector("#cup");
+      const heading = wrap.querySelector("#heading");
+    
+     /*  heading.onclick = () => wrap.style.background = "red"; */
+      heading.onclick = () => heading.innerText='추천!오늘의 커피' /* 1 */
+      cup.onclick = () => {cup.src="images/coffee-blue.jpg"}; /* 2 */
+      cup.onclick = () => {return cup.src="images/coffee-blue.jpg"}; /* 3 */
+
+    /* 
+    function a(){} ->선언적 함수 호이스팅이 있다**************사용 빈도수 많음
+    const b=function (){} ->표현식 함수 중에 임명함수 (이름이 없음) 호이스팅이 없다.
+    const b=()=>{} ->화살표 함수(람다함수) 실행문이 줄인때 중괄호를 생략해도 무관 *********많이 사용
+   (function(){})(); ->즉시실행함수(한번만 선언 할 수 있음)
+   (()=>{})(); ->즉시실행함수 
+     
+    
+    */
+    </script>
+  </body>
 </html>

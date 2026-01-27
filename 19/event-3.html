@@ -1,34 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DOM event 객체</title>
-	<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }		
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-		.container {
-			width: 500px;
-			height: 300px;
-			border: 1px solid #222;
-		}
-  </style>
-</head>
-<body>
-	<div class="container"></div>	
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 500px;
+        height: 300px;
+        border: 1px solid #222;
+      }
+    </style>
+  </head>
+  <body>
+		<per>
+			pageX,y : 스크롤을 포함한다, 전체문서 기준으로  =>툴팁, 절대위치
+			clientX,y: 스크롤을 포함 안함, 뷰포트 기준(열자 마자 보이는 화면기준) => 드레그, 애니메이션 넣을때 많이 사용
+			screenX,Y : 브라우저 위치포함, 모니터 화면기준 =>팝업창 띄울때 많이 사용
+		</per>
+    <div class="container"></div>
 
-	<script>
-		// Do it! event 객체 사용하기
-
-	</script>
-</body>
+    <script>
+      // Do it! event 객체 사용하기
+      let con = document.querySelector(".container");
+      con.onclick = (event) => {
+        /* con.innerHTML += `<p>x:${event.pageX},y:${event.pageY}</p>` */
+        con.innerHTML += `<p>x:${event.clientX},y:${event.clientY}</p>`;
+        con.innerHTML += `<p>x:${event.screenX},y:${event.screenY}</p>`;
+      };
+    </script>
+  </body>
 </html>
