@@ -1,38 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DOM - addEventListener</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    img {
-      padding: 20px;
-      height: 250px;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      box-shadow: 2px 2px 5px #ccc;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img src="images/kitty-1.png" id="cat">		
-  </div>
-  
-	<script>
-    // Do it! 이벤트 리스너로 이벤트 처리하기
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - addEventListener</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      img {
+        padding: 20px;
+        height: 250px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/kitty-1.png" id="cat" />
+    </div>
 
-	</script>
-</body>
+    <script>
+      // Do it! 이벤트 리스너로 이벤트 처리하기
+      //대상요소.addEventListener('이벤트종류',function(){},캡쳐여부)
+      //캡쳐여부:true 캡쳐링, false 버블링(이벤트가 상위요소로 전달)
+      let cat = document.querySelector("#cat");
+      cat.addEventListener("mouseover", ()=>changeSrc("images/kitty-2.png"), false);
+      cat.addEventListener("mouseout", ()=>changeSrc("images/kitty-1.png"), false);
+      cat.addEventListener("click", ()=>changeSrc("images/tree-1.jpg"), false);
+
+      /* function changePic() {
+        cat.src = "images/kitty-2.png";
+      }
+
+      function oriPic() {
+        cat.src = "images/kitty-1.png";
+      } */
+       function changeSrc(a) {
+        cat.src = a;
+      }
+     
+    </script>
+  </body>
 </html>

@@ -1,22 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web Programming</title>
-	<link rel="stylesheet" href="css/subject.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Web Programming</h1>
-    <p>공부할 주제를 기록해 보세요</p>
-    <form action="">
-      <label for="subject" class="hidden">주제</label>
-      <input type="text" id="subject" autofocus>
-      <button>추가</button>
-    </form>
-    <hr>  
-    <ul id="itemList"></ul>  
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming</title>
+    <link rel="stylesheet" href="css/subject.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Web Programming</h1>
+      <p>공부할 주제를 기록해 보세요</p>
+      <form action="">
+        <label for="subject" class="hidden">주제</label>
+        <input type="text" id="subject" autofocus />
+        <button>추가</button>
+      </form>
+      <hr />
+      <ul id="itemList"></ul>
+    </div>
+    <script>
+      function newRegister() {
+        //요소노드추가
+        const newItem = document.createElement("li");
+
+        //텍스트요소 가져오기
+        const subject = document.querySelector("#subject");
+        const newText = document.createTextNode(subject.value);
+
+        //텍스트노드를 요소노드에 추가하기
+        newItem.appendChild(newText);
+        //생성한 노드를 추가할 부모 취득
+        const itemList = document.querySelector("#itemList");
+        //부모에 생성한 노드를 자식으로 추가
+        /*   itemList.appendChild(newItem); */ /* appen 는 기존에 있는 값 뒤에 추가 */
+        itemList.insertBefore(newItem, itemList.childNodes[0]); /* insertBefore 삽입할 위치만 지정 */
+        subject.value = ""; //검색후 검색창의 입력내용을 없애주는 코드작성 예
+      }
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        newRegister();
+      });
+      //삭제하기
+      const itemList = document.querySelector("#itemList");
+      itemList.addEventListener("click", function (e) {
+        if (e.target.tagName === "LI") {
+          if (confirm("삭제하시겠습니까?")) {
+            e.target.remove(); //클릭하면 기록한 값을 삭제 target.remove
+          } else {
+            alert("삭제가 취소되었습니다.");
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
