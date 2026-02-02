@@ -1,0 +1,76 @@
+/* =======================
+========common========= */
+body {
+  line-height: 1.75;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ddd;
+}
+h3 {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: -1.5px;
+}
+
+/* ===========================
+===========nav================ */
+nav {
+  background: #333;
+  position: relative;
+  z-index: 9999;
+ 
+}
+nav.sticky{
+  background: #33333349;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  width: 100%;
+}
+a{
+  color: black;
+}
+.menu {
+  display: flex;
+  width: 100%;
+  max-width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+.dep1 {
+  width: calc(100% / 4);
+}
+.mega {
+  width: 100vw;
+  background: rgb(141, 167, 141);
+  position: absolute;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+  z-index: 1000;
+}
+.dep1.on .mega{
+  height: 500px;
+
+}
+.row {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  gap: 10%;
+  text-align: center;
+  padding: 20px 0 40px;
+  justify-content: center;
+  white-space: nowrap; /* 글자 줄바꿈 안함 */
+  
+}
+/* ==========================
+===========section============= */
+section {
+  padding: 2vw;
+  height: 100vh;
+}
